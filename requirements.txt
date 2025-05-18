@@ -1,0 +1,19 @@
+# Core PyTorch (CPU version)
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+opencv-python==4.11.0.86
+
+# Optional: Jupyter for notebooks
+jupyter
+
+# Optional: Common helper libraries
+numpy==1.26.4
+pandas
+matplotlib
+scikit-learn
+tqdm
+ultralytics
+
+flask
+flask-cors

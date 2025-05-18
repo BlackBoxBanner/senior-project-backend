@@ -1,0 +1,33 @@
+{
+	"name": "Senior Project - Backend",
+	// "dockerComposeFile": "../docker-compose.yml",
+	// "shutdownAction": "stopCompose",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt && echo 'export PYTHONPATH=\"/workspace:$PYTHONPATH\"' >> ~/.bashrc",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"ms-vscode.makefile-tools"
+			],
+			"settings": {
+				"python.languageServer": "Pylance",
+				"python.analysis.typeCheckingMode": "basic",
+				"python.autoComplete.extraPaths": [
+					"/workspace/src"
+				],
+				"cmake.configureOnOpen": true,
+				"cmake.buildDirectory": "${workspaceFolder}/build",
+				"cmake.sourceDirectory": "${workspaceFolder}/src",
+				"makefile.makePath": "/usr/bin/make"
+			}
+		}
+	},
+	"forwardPorts": [],
+	"remoteUser": "vscode"
+}
